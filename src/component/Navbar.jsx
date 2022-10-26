@@ -6,11 +6,9 @@ import {
   MenuItem,
   Toolbar,
   Typography,
-  useScrollTrigger,
 } from "@mui/material";
 import { Container } from "@mui/system";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navItems = [
@@ -27,23 +25,23 @@ const Navbar = () => {
   ];
 
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
+  // const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   // setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = (link) => {
     console.log(link);
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   // setAnchorElUser(null);
+  // };
 
   return (
     <Box sx={{ flexGrow: 1 }}>

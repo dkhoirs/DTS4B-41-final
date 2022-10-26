@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Card, Chip, Grid, Typography } from "@mui/material";
+import { Box, Card, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import "../Assets/css/DetailNews.css";
 import { useParams } from "react-router-dom";
@@ -27,12 +27,12 @@ const DetailNews = () => {
   const [news, setNews] = useState(newsInit);
   useEffect(() => {
     fetchDetail(param.plan);
-    if (dataDetail.title != undefined) {
+    if (dataDetail.title !== undefined) {
       setNews(dataDetail);
     }
   }, []);
   useEffect(() => {
-    if (dataDetail.title != undefined) {
+    if (dataDetail.title !== undefined) {
       setNews(dataDetail);
     }
   }, [dataDetail]);
@@ -59,7 +59,7 @@ const DetailNews = () => {
                 </Typography>
               </Grid>
 
-              <img src={news.image_url} className="img-primary" />
+              <img src={news.image_url} className="img-primary" alt="" />
               <Typography variant="body1" gutterBottom>
                 {news.description}
               </Typography>

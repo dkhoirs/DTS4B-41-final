@@ -1,23 +1,13 @@
-import {
-  Box,
-  Card,
-  Divider,
-  Grid,
-  selectClasses,
-  Typography,
-} from "@mui/material";
+import { Box, Card, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
 import CarouselHome from "../component/CarouselHome";
 import "../Assets/css/Home.css";
 import WidgetTab from "../component/WidgetTab";
 import { useEffect } from "react";
-import TheNews from "../apis/TheNews";
 import useNewsStore, {
   selectfetchNews,
-  selectfetchNewsAll,
   selectNews,
-  selectNewsAll,
   selectTopNews,
 } from "../store/NewsStore";
 import CardNews from "../component/CardNews";

@@ -17,6 +17,7 @@ const Categories = () => {
   const WidgetNews = ["Sports", "Business", "Politics"];
   useEffect(() => {
     fetchNews(param?.plan.toLowerCase());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [param]);
   useEffect(() => {
     if (fetchCatNews.length > 0) {

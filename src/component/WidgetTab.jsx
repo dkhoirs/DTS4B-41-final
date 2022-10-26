@@ -25,6 +25,7 @@ const WidgetTab = ({ data }) => {
   const [Catnews, setCatnews] = useState([]);
   useEffect(() => {
     fetchNews(data[tabActive].toLowerCase());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tabActive]);
   useEffect(() => {
     if (fetchCatNews.length > 0) {

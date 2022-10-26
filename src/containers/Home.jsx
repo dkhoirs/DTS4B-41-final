@@ -43,6 +43,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchedNews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     console.log(TopNews);

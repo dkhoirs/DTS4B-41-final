@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import {
   Card,
   CardContent,
@@ -16,7 +16,7 @@ import { useEffect } from "react";
 import "../Assets/css/WidgetTab.css";
 
 const WidgetTab = ({ data }) => {
-  if (data == undefined) {
+  if (data === undefined) {
     data = ["Sports", "Business", "Politics"];
   }
   const [tabActive, settabActive] = useState(0);

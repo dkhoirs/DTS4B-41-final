@@ -1,0 +1,13 @@
+.trending-bar {
+    padding: 10px 0 5px;
+    background: #f5f5f5;
+    font-size: 12px;
+}
+.trending-bar p{
+    font-size: 12px !important;
+}
+.trending-bar button{
+    margin: 0;
+    padding: 0;
+    font-size: 12px !important;
+}

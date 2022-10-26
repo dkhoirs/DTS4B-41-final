@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//const API_KEY = "QwcoV26lXZLQtMBWbnml04ZA68iEkHdVm1PXvZ8L"; // "pxjZYQIvi4N4ULEUMrQfR2dkblauUROpBT6oA83Z";
 const API_KEY = process.env.REACT_APP_NEWS_KEY;
 const baseUrl = "https://api.thenewsapi.com/v1/news";
 

@@ -8,7 +8,7 @@ import { auth } from "../config/firebase";
 
 const Login = ({ open, handleClose, handleOpenRegiter }) => {
   // const setUser = useNewsStore(selectfetchUserAuth());
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, error] =
     useSignInWithEmailAndPassword(auth);
   const [message, setmessage] = useState("");
   const handleSubmit = async (event) => {

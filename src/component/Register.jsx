@@ -8,7 +8,7 @@ import { auth } from "../config/firebase";
 
 const Register = ({ open, handleClose, handleOpenLogin }) => {
   const [message, setmessage] = useState("");
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, error] =
     useCreateUserWithEmailAndPassword(auth);
 
   const handleSubmit = async (event) => {

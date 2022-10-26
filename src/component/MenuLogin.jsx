@@ -18,7 +18,7 @@ const MenuLogin = ({
   settings,
   handleOpenLogin,
 }) => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   console.log(user);
   if (user) {
     return (

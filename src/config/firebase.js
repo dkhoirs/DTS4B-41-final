@@ -5,7 +5,8 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY, //"AIzaSyCYc2RAyVtuzpS49Y45kSk_djkN9l_DzPQ",
+  //apiKey: "AIzaSyCYc2RAyVtuzpS49Y45kSk_djkN9l_DzPQ",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "dtsreact.firebaseapp.com",
   projectId: "dtsreact",
   storageBucket: "dtsreact.appspot.com",
@@ -16,4 +17,4 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-export { auth };
+export { auth, app };

@@ -1,0 +1,67 @@
+.section{
+    margin-top:2em;
+}
+.section-header-widged{
+    padding-left: 1em;
+    padding-top: 1em;
+}
+.carousel .slide .legend{
+    bottom: -12px;
+    height: 100px;
+    padding: 10px;
+    text-align: left;
+    left: 45%;
+    margin-left: -45%;
+    width: 100%;
+    background: #00000073;
+    opacity: unset;
+}
+.carousel .carousel-status{
+    display: none;
+}
+
+
+/* Carousel Main */
+.carousel-main .thumbs-wrapper{
+    margin: 0;
+}
+.carousel-main .slide img{
+    width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.carousel-main .thumb img{
+    width: 100%;
+  height: 45px;
+  object-fit: cover;
+}
+/* Carousel Top */
+.carousel-top .thumbs-wrapper{
+    display: none;
+}
+.carousel-top .slide .legend{
+    bottom: 0;
+    top: -12px;
+    padding: 10px;
+    height: 100%;
+}
+.carousel-top .slide img{
+    width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+/* Carousel bootom */
+.carousel-bottom .thumbs-wrapper{
+    display: none;
+}
+.carousel-bottom .slide .legend{
+    bottom: 0;
+    top: -12px;
+    padding: 10px;
+    height: 100%;
+}
+.carousel-bottom .slide img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}

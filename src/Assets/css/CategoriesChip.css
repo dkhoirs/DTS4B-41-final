@@ -1,0 +1,28 @@
+.CategoriesChip{
+    border-radius: 8px !important;
+    margin-right: 5px;
+}
+.CategoriesChip.general{
+    background-color: rgb(2, 137, 137);
+    color: white;
+}
+.CategoriesChip.business{
+    background-color: rgb(12, 84, 199);
+    color: white;
+}
+.CategoriesChip.science{
+    background-color: rgb(212, 188, 2);
+    color: white;
+}
+.CategoriesChip.sports{
+    background-color: rgb(212, 107, 2);
+    color: white;
+}
+.CategoriesChip.business{
+    background-color: rgb(135, 165, 3);
+    color: white;
+}
+.CategoriesChip.health{
+    background-color: rgb(255, 255, 255);
+    color: rgb(97, 97, 97);
+}

@@ -7,9 +7,14 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import { auth } from "../config/firebase";
+import { useState } from "react";
+import useMyStore, {
+  selectfetchUserAuth,
+  selectMyStore,
+} from "../store/MyStore";
+import { isEmpty } from "@firebase/util";
 
 const MenuLogin = ({
   handleOpenUserMenu,
@@ -18,9 +23,32 @@ const MenuLogin = ({
   settings,
   handleOpenLogin,
 }) => {
-  const [user] = useAuthState(auth);
-  console.log(user);
-  if (user) {
+  const myStores = useMyStore(selectMyStore);
+  const setAuth = useMyStore(selectfetchUserAuth);
+  const [isLogin, setisLogin] = useState(false);
+
+  useState(() => {
+    if (isEmpty(myStores) === false) {
+      if (myStores.user.uid !== undefined) {
+        console.log(true);
+        setisLogin(true);
+      } else {
+        console.log(false);
+        setisLogin(false);
+      }
+    }
+    setisLogin(true);
+    console.log(isEmpty(myStores));
+  }, [myStores]);
+
+  const handleLogout = () => {
+    setAuth({});
+    signOut(auth);
+    setisLogin(false);
+    console.log(myStores);
+  };
+
+  if (isLogin) {
     return (
       <>
         <Tooltip title="Open settings">
@@ -45,7 +73,7 @@ const MenuLogin = ({
           onClose={handleCloseUserMenu}
         >
           {settings.map((setting) => (
-            <MenuItem key={setting} onClick={signOut(auth)}>
+            <MenuItem key={setting} onClick={handleLogout}>
               <Typography textAlign="center">{setting}</Typography>
             </MenuItem>
           ))}

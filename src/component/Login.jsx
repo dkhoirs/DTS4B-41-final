@@ -1,14 +1,15 @@
 import { Button, Modal, TextField } from "@mui/material";
 import { Box } from "@mui/system";
-// import { signInWithEmailAndPassword } from "firebase/auth";
+
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useState } from "react";
 import { auth } from "../config/firebase";
-// import useNewsStore, { selectfetchUserAuth } from "../store/NewsStore";
+import useMyStore, { selectfetchUserAuth } from "../store/MyStore";
 
 const Login = ({ open, handleClose, handleOpenRegiter }) => {
-  // const setUser = useNewsStore(selectfetchUserAuth());
-  const [signInWithEmailAndPassword, error] =
+  const setAuth = useMyStore(selectfetchUserAuth);
+
+  const [signInWithEmailAndPassword, user, error] =
     useSignInWithEmailAndPassword(auth);
   const [message, setmessage] = useState("");
   const handleSubmit = async (event) => {
@@ -19,15 +20,20 @@ const Login = ({ open, handleClose, handleOpenRegiter }) => {
     const password = data.get("password");
     try {
       signInWithEmailAndPassword(email, password);
-      // setUser(user);
+
       if (error) {
         setmessage(error.message);
       } else {
+        setAuth(user);
         handleClose();
       }
     } catch (err) {
       console.log(err);
-      setmessage(err.message);
+      if (err) {
+        setmessage(err.message);
+      } else {
+        handleClose();
+      }
     }
   };
 

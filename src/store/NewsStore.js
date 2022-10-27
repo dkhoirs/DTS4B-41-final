@@ -4,7 +4,6 @@ import TheNews from "../apis/TheNews";
 const initialNews = [];
 const initialAllNews = [];
 const initialDetailNews = {};
-const initialUsers = {};
 
 const useNewsStore = create((set) => ({
   allNews: initialAllNews,
@@ -12,10 +11,6 @@ const useNewsStore = create((set) => ({
   topnews: initialNews,
   CatNews: initialNews,
   DetailNews: initialDetailNews,
-  Users: initialUsers,
-  fetchUserAuth: (users) => {
-    console.log(users);
-  },
   fetchNews: async () => {
     try {
       const fetchedNews = await TheNews.get("/top");
@@ -63,6 +58,4 @@ export const selectCatNews = (state) => state.CatNews;
 export const selectDetailNews = (state) => state.DetailNews;
 export const selectfetchNewsByID = (state) => state.fetchNewsByID;
 export const selectfetchNewsByCat = (state) => state.fetchNewsByCat;
-export const selectUser = (state) => state.Users;
-export const selectfetchUserAuth = (state) => state.fetchUserAuth;
 export default useNewsStore;

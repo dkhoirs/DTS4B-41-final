@@ -1,6 +1,6 @@
 # DTS REA4 Final Project
 
-Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk). 
+Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk).
 
 ## Daftar pair
 
@@ -17,3 +17,15 @@ Contoh: `dts4a-01-final`
 ## Branching, commit
 
 Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun hasil akhirnya harus di merge ke branch `main` dan di push ke Github. Pastikan hasil akhir kode sudah ter-push!
+
+## Final Project
+
+![](./Final-Project-ReactJS.gif)
+Link Live App : https://my-final-project-dtsrea4b.netlify.app/
+
+Fitur Aplikasi
+
+1. Login
+2. Register
+3. Halaman Utama, Halaman Kategori dan Halaman Detail Berita
+4. Fitur Unik filter by Kategori Berita

@@ -5,10 +5,12 @@ import { Box } from "@mui/system";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useState } from "react";
 import { auth } from "../config/firebase";
+import useMyStore, { selectfetchUserAuth } from "../store/MyStore";
 
 const Register = ({ open, handleClose, handleOpenLogin }) => {
   const [message, setmessage] = useState("");
-  const [createUserWithEmailAndPassword, error] =
+  const setAuth = useMyStore(selectfetchUserAuth);
+  const [createUserWithEmailAndPassword, user, error] =
     useCreateUserWithEmailAndPassword(auth);
 
   const handleSubmit = async (event) => {
@@ -22,11 +24,16 @@ const Register = ({ open, handleClose, handleOpenLogin }) => {
       if (error) {
         setmessage(error.message);
       } else {
+        setAuth(user);
         handleClose();
       }
     } catch (err) {
       console.log(err);
-      setmessage(err.message);
+      if (err) {
+        setmessage(err.message);
+      } else {
+        handleClose();
+      }
     }
   };
 

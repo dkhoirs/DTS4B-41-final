@@ -21,6 +21,7 @@ Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun h
 ## Final Project
 
 ![](./Final-Project-ReactJS.gif)
+
 Link Live App : https://my-final-project-dtsrea4b.netlify.app/
 
 Fitur Aplikasi
@@ -29,3 +30,7 @@ Fitur Aplikasi
 2. Register
 3. Halaman Utama, Halaman Kategori dan Halaman Detail Berita
 4. Fitur Unik filter by Kategori Berita
+
+By
+M. Khoiruddin
+Dikerjakan Solo karna sudah di chat di classroom dan discord tidak ada respon
